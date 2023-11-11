@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <link href="styles.css" rel="stylesheet">
+    <!-- Trivia page -->
+    <title>Trivia</title>
+    <script>
+
+        // Variable to track the corrects options answered
+        let correctans = 0;
+
+        // Function to verify answers with parameters of the id to change color, option to check if the option is the correct one, and the number of question to modify the paragraph variable to say if it s correct or not
+        function ans(id, opt, num){
+            let answer = "answer" + num;
+            if (opt == true){
+                document.getElementById(id).style.backgroundColor = 'green';
+                document.getElementById(answer).innerHTML = 'Correct!';
+                correctans++;
+                if (correctans == 9){
+                    alert("You answered correctly all the questions!");
+                }
+            }
+            else{
+                document.getElementById(id).style.backgroundColor = 'red';
+                document.getElementById(answer).innerHTML = 'Incorrect';
+            }
+        }
+
+    </script>
+</head>
+<body class="stars">
+    <header>
+        <div class="accordion custom-accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        MENU
+                    </button>
+                </h5>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <a href="index.html" class="accordion-link"> Home</a>
+                        <a href="page1.html" class="accordion-link"> Prequels</a>
+                        <a href="page2.html" class="accordion-link"> Original</a>
+                        <a href="page3.html" class="accordion-link"> Sequels </a>
+                        <a href="page4.html" class="accordion-link"> Trivia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="center">
+        <h1>TRIVIA</h1>
+    </div>
+    <div>
+
+        <!-- Each question has 4 possible answers with their unique ID and calls the function ans() sending the id as a parameter, along a boolean value to define if the answer is correct and the number of question -->
+
+        <h3>Prequel Questions</h3>
+        <br>
+        <p>1. What is the name of the third movie?</p>
+        <div class="section">
+            <p id = "answer1"></p>
+            <button onclick="ans(this.id, false, 1)" id="CW" class="custom-button">Clone Wars</button>
+            <button onclick="ans(this.id, true, 1)" id="Rots" class="custom-button">Revenge of the Sith</button>
+            <button onclick="ans(this.id, false, 1)" id="TPM" class="custom-button">The Phantom Menace</button>
+            <button onclick="ans(this.id, false, 1)" id="AotC" class="custom-button">Attack of the Clones</button>
+        </div>
+        <br>
+        <p>2. What is the central theme explored in the Star Wars prequel trilogy?</p>
+        <div class="section">
+            <p id = "answer2"></p>
+            <button onclick="ans(this.id, false, 2)" id="JO" class="custom-button">The triumph of the Jedi Order</button>
+            <button onclick="ans(this.id, false, 2)" id="RGR" class="custom-button">The rise of the Galactic Republic</button>
+            <button onclick="ans(this.id, true, 2)" id="FallAnakin" class="custom-button">The fall of Anakin an the Jedi Order</button>
+            <button onclick="ans(this.id, false, 2)" id="FallSith" class="custom-button">The fall of the Sith Empire</button>
+        </div>
+        <br>
+        <p>3. Who orchestrates the rise to power of the Sith and the outbreak of the Clone Wars?</p>
+        <div class="section">
+            <p id = "answer3"></p>
+            <button onclick="ans(this.id, false, 3)" id="Ank" class="custom-button"> Anakin Skywalker</button>
+            <button onclick="ans(this.id, true, 3)" id="DS" class="custom-button">Darth Sidious</button>
+            <button onclick="ans(this.id, false, 3)" id="JC" class="custom-button">The Jedi Council</button>
+            <button onclick="ans(this.id, false, 3)" id="GS" class="custom-button">The Galactic Senate</button>
+        </div>
+        <br>
+
+        <h3>Original Trilogy Questions</h3>
+        <br>
+        <p>1. What is the central objective of the main characters in the Star Wars original trilogy?</p>
+        <div class="section">
+            <p id = "answer4"></p>
+            <button onclick="ans(this.id, false, 4)" id="Force" class="custom-button">To uncover the mysteries of the Force</button>
+            <button onclick="ans(this.id, false, 4)" id="VengEMp" class="custom-button">To seek vengeance against the Empire</button>
+            <button onclick="ans(this.id, true, 4)" id="Overthrow" class="custom-button">To overthrow the Galactic Empire and restore galactic independence</button>
+            <button onclick="ans(this.id, false, 4)" id="UnkReg" class="custom-button">To explore the unknown regions of the galaxy</button>
+        </div>
+        <br>
+        <p>2. Which film in the original Star Wars trilogy is noted for revealing shocking truths and testing the determination of the heroes?</p>
+        <div class="section">
+            <p id = "answer5"></p>
+            <button onclick="ans(this.id, false, 5)" id="RotJ" class="custom-button">Return of the Jedi</button>
+            <button onclick="ans(this.id, false, 5)" id="NH" class="custom-button">A New Hope</button>
+            <button onclick="ans(this.id, false, 5)" id="Phantom" class="custom-button">The Phantom Menace</button>
+            <button onclick="ans(this.id, true, 5)" id="ESB" class="custom-button">The Empire Strikes Back</button>
+        </div>
+        <br>
+        <p>3. Who is not part of the main group of heroes in this trilogy?</p>
+        <div class="section">
+            <p id = "answer6"></p>
+            <button onclick="ans(this.id, true, 6)" id="AnkS" class="custom-button">Anakin Skywalker</button>
+            <button onclick="ans(this.id, false, 6)" id="Han" class="custom-button">Han Solo</button>
+            <button onclick="ans(this.id, false, 6)" id="Princess" class="custom-button">Princess Leia</button>
+            <button onclick="ans(this.id, false, 6)" id="Luke" class="custom-button">Luke Skywalker</button>
+        </div>
+        <br>
+
+        <h3>Sequel Questions</h3>
+        <p>1. What organization presents a new threat in the Star Wars sequel trilogy?</p>
+        <div class="section">
+            <p id = "answer7"></p>
+            <button onclick="ans(this.id, false, 7)" id="Sith" class="custom-button">The Sith</button>
+            <button onclick="ans(this.id, false, 7)" id="Alliance" class="custom-button">The Rebel Alliance</button>
+            <button onclick="ans(this.id, false, 7)" id="JediOrder" class="custom-button">The Jedi Order</button>
+            <button onclick="ans(this.id, true, 7)" id="First" class="custom-button">The First Order</button>
+        </div>
+        <br>
+        <p>2. Which legendary characters from the original Star Wars trilogy make appearances in the sequel trilogy?</p>
+        <div class="section">
+            <p id = "answer8"></p>
+            <button onclick="ans(this.id, false, 8)" id="ObiYoda" class="custom-button">Obi-Wan Kenobi and Yoda</button>
+            <button onclick="ans(this.id, false, 8)" id="DarthEmp" class="custom-button">Darth Vader and Emperor Palpatine</button>
+            <button onclick="ans(this.id, true, 8)" id="H,P,L" class="custom-button">Han Solo, Princess Leia, and Luke Skywalker</button>
+            <button onclick="ans(this.id, false, 8)" id="R,F,P" class="custom-button">Rey, Finn, and Poe</button>
+        </div>
+        <br>
+        <p>3. Which directors were responsible for the Star Wars sequel trilogy?</p>
+        <div class="section">
+            <p id = "answer9"></p>
+            <button onclick="ans(this.id, true, 9)" id="JJRJ" class="custom-button">J.J. Abrams and Rian Johnson</button>
+            <button onclick="ans(this.id, false, 9)" id="GLJJ" class="custom-button">George Lucas and J.J. Abrams</button>
+            <button onclick="ans(this.id, false, 9)" id="RSS" class="custom-button">Rian Johnson and Steven Spielberg</button>
+            <button onclick="ans(this.id, false, 9)" id="GLR" class="custom-button">George Lucas and Rian Johnson</button>
+        </div>
+        <br>
+        <br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+
+/* Stars image that repeats itself in the bakcground for thematic of star wars */
+.stars {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: #000 url('https://i.imgur.com/YKY28eT.png') repeat top center;
+}
+
+/* Titles are color orange and use this speceific font for h1 and h5 */
+h1, h5 {
+    color: Orange;
+    font-family: "Copperplate", fantasy;
+}
+
+/* Paragraphs and h3's are color white, use georgia font, aligned at center and have a grey shadow */
+
+p, h3 {
+    color: white;
+    font-family: "Georgia", Georgia, serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px grey;
+}
+
+
+/* Changes the position and size of the accordion from bootstrap */
+
+.custom-accordion {
+    max-width: 200px;
+    padding: 10px;
+    margin: 20px auto;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+
+/* Changes the color of the text and background form the accordion button before cliking on it (defalut colors)*/
+
+.accordion-item:not(.show) .accordion-button {
+    background-color: lightgrey;
+    color: Orange;
+}
+
+/* Changes the color of the text and background form the accordion button */
+
+.accordion-button {
+    color: Orange;
+    font-family: "Copperplate", fantasy;
+    background-color: lightgrey;
+}
+
+/* Changes the color of the background form the accordion body */
+
+.accordion-body {
+    background-color: #333;
+}
+
+/* Changes the color of the links to white, with no decoration in te text (not underlined) and their positions */
+
+.accordion-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid #555;
+}
+
+/* Changes the color of the links when you hover over them to grey */
+
+.accordion-link:hover {
+    background-color: none;
+    color: grey;
+}
+
+/* Creates calss to center elements in html */
+
+.center {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Aligns sections to the center */
+.section {
+    text-align: center;
+}
+
+/* Defines background and text colors for the buttons, their position, the text is aligned in the buttons, the font size, opacity, margins, and cursor */
+
+.custom-button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 10px;
+    margin: 2px 2px;
+    opacity: 0.8;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* As it is a custom button, it hcanges the opacity of the button when you hover over it */
+
+.custom-button:hover {
+    opacity: 1;
+}
